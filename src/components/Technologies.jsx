@@ -1,9 +1,12 @@
 import React from 'react'
+import '../styles/components/technologies.sass'
+
+const technologies = ["Html", "CSS", "JavaScript","Vue.js","React", "SASS", "Less", "Node.Js", "Python", "CICD", "DevOps", "Code Security", "GitHub", "SQL", "UX Design"]
 
 const Technologies = () => {
   return (
-    <div>
-      
+    <div className='container-code-tag '>
+      <p className='code-tag'>Gabisinhas</p>
     </div>
   )
 }
