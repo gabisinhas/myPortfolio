@@ -20,7 +20,8 @@ const About = () => {
 
       Front-End Development: HMTL, CSS, Carbon, Vue.js, JavaScript, LESS/SASS, UX Design, Accessibility
       Back-End Development: Node.js, Python, SQL, MongoDB, IBM DB2 Relational DB, IBM Cloudant NoSQL
-      Tools & Platforms: GitHub, JIRA, Confluence, SonarQube, Mend, CI/CD pipelines, IBM Cloud, qTest, Docker, Equus APRO
+      <br/>      <br/>
+      <b>Tools & Platforms:</b>GitHub, JIRA, Confluence, SonarQube, Mend, CI/CD pipelines, IBM Cloud, qTest, Docker, Equus APRO
       Security & Compliance: Code Security, CI/CD, Vulnerabilties management
       Collaboration & Leadership: Agile Methodologies, Team Empowerment, SCRUM
     </p>

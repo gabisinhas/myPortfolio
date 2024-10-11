@@ -8,8 +8,7 @@ const Technologies = () => {
   <div className='container-code-tag '>
   {techAreas.map((area, index) =>(
       <p className='code-tag' key={index}>{area}</p>      
-  ))
-  }
+  ))}
   </div>
   
 )}
