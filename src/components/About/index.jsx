@@ -11,7 +11,8 @@ const About = () => {
 
     Driven by a commitment to continuous learning, I combine strong communication skills with a flexible approach. I am passionate about cultivating collaborative environments, where my leadership facilitates open dialogue and empowers teams to reach their full potential.
     <br/>
-    <b>Currently Studying:</b> AVA / React / Typescript / MongoDB / Postgresql / Github Actions / Docker / Tailwind
+    <br/>
+    <b>Currently Studying:</b> JAVA / React / Typescript / MongoDB / Postgresql / Github Actions / Docker / Tailwind
 
     </p>
 
