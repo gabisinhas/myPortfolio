@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/components/maincontent.sass'
-import About from './About'
+import About from './About/index'
 import Projects from './Projects'
 import Technologies from './Technologies'
 

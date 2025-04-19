@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/components/technologies.sass'
 
-const techAreas = ["Html", "CSS", "JavaScript","Vue.js","React", "SASS", "Less", "Node.Js", "Python", "CICD", "DevOps", "Code Security", "GitHub", "SQL", "UX Design"]
+const techAreas = ["Html", "CSS", "JavaScript","Vue.js","React", "Node.Js", "Python", "CICD", "DevOps","Docker", "Code Security", "GitHub", "SQL", "UX Design"]
 
 const Technologies = () => {
   return (

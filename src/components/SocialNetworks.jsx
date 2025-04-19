@@ -5,7 +5,6 @@ import {FaLinkedinIn, FaGithub, FaInstagram} from 'react-icons/fa'
 const socialNetworks = [
     {name: "linkedin",id:"https://www.linkedin.com/in/gabsanto/" ,icon: <FaLinkedinIn />},
     {name: "github", id:"https://github.com/gabisinhas?tab=repositories",icon: <FaGithub />},
-    {name: "instagram",id:"https://www.instagram.com/biela.santos/" ,icon: <FaInstagram />}
 ]
 
 const SocialNetworks = () => {
