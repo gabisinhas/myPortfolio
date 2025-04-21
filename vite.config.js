@@ -9,6 +9,15 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx'], // Add support for .jsx files
   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
+      },
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {
