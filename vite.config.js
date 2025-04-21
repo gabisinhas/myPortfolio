@@ -13,6 +13,11 @@ export default defineConfig({
     loader: 'jsx', // Ensure JSX files are properly handled
     include: /src\/.*\.jsx?$/, // Include JSX files in the src directory
   },
+  server: {
+    mimeTypes: {
+      'text/jsx': 'application/javascript', // Map text/jsx to application/javascript
+    },
+  },
   build: {
     rollupOptions: {
       output: {
