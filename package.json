@@ -5,7 +5,6 @@
   "homepage": "https://gabisinhas.github.io/myPortfolio/",
   "type": "module",
   "scripts": {
-    "start": "npm run build && npm run deploy",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
