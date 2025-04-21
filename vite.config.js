@@ -9,6 +9,10 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx'], // Add support for .jsx files
   },
+  esbuild: {
+    loader: 'jsx', // Ensure JSX files are properly handled
+    include: /src\/.*\.jsx?$/, // Include JSX files in the src directory
+  },
   build: {
     rollupOptions: {
       output: {
