@@ -26,11 +26,9 @@ export default defineConfig({
       },
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler', // or "modern", "legacy"
-      }
-    }
-  }
+css: {
+  preprocessorOptions: {
+    sass: {}, // Use "sass" instead of "scss"
+  },
+},
 })
