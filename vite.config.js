@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: './', // Ensure the root is set to the correct directory
-  plugins: [react()],
+  plugins: [react(),  ],
+  base:"/myPortfolio/", // Set the base path for the project
   resolve: {
     extensions: ['.js', '.jsx'], // Add support for .jsx files
   },
