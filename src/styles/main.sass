@@ -1,14 +1,26 @@
 @use 'variables'
+@use 'components/pages'
     
 *
     padding: 0
     margin: 0
-    font-display: variables.$font-stack
-    box-sizing: border-
+    font-family: variables.$font-stack
+    box-sizing: border-box
     
+html, body
+    height: 100%
+    min-height: 100vh
+
 body
     background: variables.$body-bg-color
+    font-family: variables.$font-stack
+    display: flex
+    flex-direction: column
 
+#root
+    display: flex
+    flex-direction: column
+    min-height: 100vh
 
 a,svg
     transition: .4s    

@@ -1,8 +1,8 @@
 import React from 'react'
-import Avatar from '../img/eu.jpg'
-import "../styles/components/sidebar.sass"
-import SocialNetworks from './SocialNetworks'
-import InformationContainer from './InformationContainer'
+import Avatar from '../../img/eu.jpg'
+import "./sidebar.sass"
+import SocialNetworks from '../SocialNetwork/SocialNetworks'
+import InformationContainer from '../Information/InformationContainer'
 
 const SideBar = () => {
   return (

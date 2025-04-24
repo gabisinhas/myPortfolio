@@ -1,0 +1,53 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.about-container
+    margin-bottom: 2rem
+    background-color: variables.$bg-color
+    border-radius: variables.$container-border-radius
+
+    h2
+        color: variables.$text-color
+        font-size: 2.2rem
+        margin-bottom: 1.3rem
+        @include mixins.center
+        justify-content: start    
+        gap: 1rem
+
+        &:after
+            @include mixins.gradient-border
+
+    p
+        color: variables.$text-color-secondary        
+        margin-bottom: 1rem
+        line-height: 1.4rem
+        font-size: 1.1rem
+
+    .tech-icons
+        display: flex
+        flex-wrap: wrap
+        gap: 1.5rem
+        margin-top: 1rem
+        margin-bottom: 2rem
+
+    .tech-icon
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 0.5rem
+        transition: transform 0.3s ease
+
+        &:hover
+            transform: translateY(-5px)
+
+        svg
+            color: variables.$text-color
+            transition: color 0.3s ease
+
+            &:hover
+                color: variables.$gradient
+
+        span
+            color: variables.$text-color-secondary
+            font-size: 0.9rem
+            text-align: center
