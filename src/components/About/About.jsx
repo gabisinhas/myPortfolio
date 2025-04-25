@@ -15,35 +15,35 @@ const About = () => {
         <b>Currently Studying:</b>
         <div className="tech-icons">
           <div className="tech-icon">
-            <FaJava size={24} />
+            <FaJava size={24} color="#f89820" aria-label="Java" />
             <span>Java</span>
           </div>
           <div className="tech-icon">
-            <FaReact size={24} />
+            <FaReact size={24} color="#61dafb" aria-label="React" />
             <span>React</span>
           </div>
           <div className="tech-icon">
-            <SiTypescript size={24} />
+            <SiTypescript size={24} color="#3178c6" aria-label="TypeScript" />
             <span>TypeScript</span>
           </div>
           <div className="tech-icon">
-            <SiMongodb size={24} />
+            <SiMongodb size={24} color="#47a248" aria-label="MongoDB" />
             <span>MongoDB</span>
           </div>
           <div className="tech-icon">
-            <SiPostgresql size={24} />
+            <SiPostgresql size={24} color="#336791" aria-label="PostgreSQL" />
             <span>PostgreSQL</span>
           </div>
           <div className="tech-icon">
-            <SiGithubactions size={24} />
+            <SiGithubactions size={24} color="#2088FF" aria-label="GitHub Actions" />
             <span>GitHub Actions</span>
           </div>
           <div className="tech-icon">
-            <FaDocker size={24} />
+            <FaDocker size={24} color="#2496ed" aria-label="Docker" />
             <span>Docker</span>
           </div>
           <div className="tech-icon">
-            <SiTailwindcss size={24} />
+            <SiTailwindcss size={24} color="#38bdf8" aria-label="Tailwind CSS" />
             <span>Tailwind</span>
           </div>
         </div>
