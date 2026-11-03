@@ -1,17 +1,11 @@
 @use '../variables'
+@use '../mixins'
 
-#portfolio
+.page
     display: flex
-    flex-wrap: wrap
-    padding: 0 3rem
-    gap: 1rem
+    flex-direction: column
     flex: 1
-    
-    h1
-        width: 100%
-        font-size: 5rem
-        background: variables.$gradient
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        text-align: center
-        margin-top: 6rem
+    min-width: 0
+
+section
+    scroll-margin-top: 5rem

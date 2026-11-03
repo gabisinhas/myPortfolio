@@ -1,0 +1,16 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.theme-toggle
+    width: 2.25rem
+    height: 2.25rem
+    background: transparent
+    border: 1px solid variables.$line-color
+    border-radius: variables.$radius-sm
+    color: variables.$text-color-secondary
+    cursor: pointer
+    @include mixins.center
+
+    &:hover
+        border-color: variables.$accent
+        color: variables.$accent-text

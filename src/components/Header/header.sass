@@ -2,41 +2,136 @@
 @use '../../styles/mixins'
 
 .header
-    background-color: variables.$bg-color
-    padding: 1rem 2rem
+    background-color: color-mix(in srgb, var(--bg) 85%, transparent)
+    backdrop-filter: blur(10px)
+    border-bottom: 1px solid variables.$line-color
+    padding: 1.1rem 0
     position: fixed
     top: 0
     left: 0
     right: 0
     z-index: 1000
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+    transition: background-color .2s ease, border-color .2s ease
 
 .nav
-    max-width: 1200px
-    margin: 0 auto
     display: flex
-    justify-content: flex-end
+    align-items: center
+    justify-content: space-between
+    gap: 1.5rem
+
+.brand
+    display: flex
+    align-items: center
+    gap: .75rem
+    text-decoration: none
+
+.brand-mark
+    @include mixins.center
+    width: 2.4rem
+    height: 2.4rem
+    border-radius: variables.$radius-sm
+    background: variables.$accent
+    color: variables.$ink-on-accent
+    font-weight: 700
+    font-size: .95rem
+
+.brand-name
+    color: variables.$text-color
+    font-weight: 700
+    font-size: 1.1rem
+
+    @include mixins.mobile
+        display: none
+
+.nav-right
+    display: flex
+    align-items: center
+    gap: 2rem
 
 .nav-list
     display: flex
-    gap: 2rem
+    gap: 1.75rem
     list-style: none
-    padding: 0
-    margin: 0
 
 .nav-link
-    color: variables.$text-color
+    color: variables.$text-color-secondary
     text-decoration: none
-    font-size: 1.1rem
-    font-weight: 500
-    padding: 0.5rem 1rem
-    border-radius: 0.5rem
-    transition: all 0.3s ease
+    font-size: .95rem
+    font-weight: 600
 
-    &:hover
-        background: variables.$gradient
-        color: white
-        transform: translateY(-2px)
+    &:hover,
+    &:focus-visible
+        color: variables.$accent-text
 
-    &:active
-        transform: translateY(0) 
+.header-actions
+    display: flex
+    align-items: center
+    gap: 1rem
+
+.icon-link
+    color: variables.$text-color
+    font-size: 1.15rem
+    display: flex
+
+    &:hover,
+    &:focus-visible
+        color: variables.$accent-text
+
+.menu-toggle
+    display: none
+    flex-direction: column
+    justify-content: center
+    gap: 5px
+    width: 2.25rem
+    height: 2.25rem
+    background: transparent
+    border: 1px solid variables.$line-color
+    border-radius: variables.$radius-sm
+    cursor: pointer
+
+    span
+        display: block
+        width: 1.1rem
+        height: 2px
+        margin: 0 auto
+        background: variables.$text-color
+
+@include mixins.tablet
+    .menu-toggle
+        display: flex
+
+    .nav-right
+        gap: .75rem
+
+    .nav-list
+        position: fixed
+        top: 4.5rem
+        right: 1rem
+        left: 1rem
+        flex-direction: column
+        gap: 0
+        background: variables.$bg-color-secondary
+        border: 1px solid variables.$line-color
+        border-radius: variables.$radius-lg
+        box-shadow: variables.$shadow-card
+        padding: .5rem
+        transform: translateY(-.5rem)
+        opacity: 0
+        pointer-events: none
+        transition: opacity .2s ease, transform .2s ease
+
+        &.is-open
+            opacity: 1
+            transform: translateY(0)
+            pointer-events: auto
+
+        li
+            width: 100%
+
+        .nav-link
+            display: block
+            padding: .75rem .5rem
+            border-bottom: 1px solid variables.$line-color
+
+        li:last-child .nav-link
+            border-bottom: none

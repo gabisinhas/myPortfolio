@@ -6,15 +6,120 @@
     align-items: center
 
 @mixin btn
-    padding: 1rem 1.2rem
-    color: variables.$text-color
-    background: variables.$gradient
+    display: inline-flex
+    align-items: center
+    gap: .5rem
+    padding: .85rem 1.5rem
+    color: variables.$ink-on-accent
+    background: variables.$accent
+    font-size: .95rem
+    font-weight: 600
     text-decoration: none
-    border-radius: 3rem
+    border-radius: variables.$radius-md
+    border: 1px solid variables.$accent
+    transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease
 
-@mixin gradient-border
-    content:""
-    background: variables.$gradient       
-    height: 3px
-    width: 30%          
+    &:hover
+        transform: translateY(-1px)
+        box-shadow: variables.$shadow-card
 
+@mixin btn-outline
+    display: inline-flex
+    align-items: center
+    gap: .5rem
+    padding: .85rem 1.5rem
+    color: variables.$text-color
+    background: variables.$bg-color-secondary
+    font-size: .95rem
+    font-weight: 600
+    text-decoration: none
+    border-radius: variables.$radius-md
+    border: 1px solid variables.$line-color
+    transition: transform .15s ease, border-color .15s ease
+
+    &:hover
+        transform: translateY(-1px)
+        border-color: variables.$accent
+
+@mixin eyebrow
+    display: inline-flex
+    align-items: center
+    gap: .6rem
+    color: variables.$accent-text
+    font-size: .8rem
+    font-weight: 700
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    margin-bottom: .9rem
+
+    &::before
+        content: ""
+        display: block
+        width: 1.5rem
+        height: 2px
+        background: variables.$accent
+
+@mixin card
+    background: variables.$bg-color-secondary
+    border: 1px solid variables.$line-color
+    border-radius: variables.$radius-lg
+    box-shadow: variables.$shadow-card
+
+@mixin card-hover
+    transition: transform .18s ease, box-shadow .18s ease
+
+    &:hover
+        transform: translateY(-3px)
+
+@mixin focus-ring
+    outline: 2px solid variables.$accent
+    outline-offset: 3px
+
+@mixin icon-badge($size: 2.4rem)
+    @include center
+    flex: 0 0 auto
+    width: $size
+    height: $size
+    border-radius: variables.$radius-sm
+    background: variables.$accent-soft
+    color: variables.$accent-text
+    font-size: 1rem
+    font-weight: 700
+
+@mixin tag-pill($size: sm)
+    display: inline-flex
+    align-items: center
+    gap: .4rem
+    font-weight: 600
+    color: variables.$accent-text
+    background: variables.$accent-soft
+    border-radius: variables.$radius-pill
+    transition: background-color .2s ease, color .2s ease
+
+    svg
+        flex: 0 0 auto
+
+    &:hover
+        background: variables.$accent
+        color: variables.$ink-on-accent
+
+    @if $size == md
+        font-size: .85rem
+        padding: .5rem .95rem .5rem .75rem
+
+        svg
+            font-size: .95rem
+    @else
+        font-size: .75rem
+        padding: .3rem .7rem .3rem .55rem
+
+        svg
+            font-size: .85rem
+
+@mixin mobile
+    @media (max-width: variables.$bp-mobile)
+        @content
+
+@mixin tablet
+    @media (max-width: variables.$bp-tablet)
+        @content

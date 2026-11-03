@@ -1,0 +1,53 @@
+// Runtime theme tokens (CSS custom properties) so light/dark can switch
+// without a rebuild. :root holds the light palette by default (this is the
+// primary, designed-for theme); the inline script in index.html sets
+// data-theme before first paint to avoid a flash.
+
+:root
+    --bg: #f8f6fc
+    --surface: #ffffff
+    --surface-raised: #f1ecf9
+    --line: #ece5f5
+    --text: #221934
+    --text-secondary: #635b78
+    --accent: #4b2e83
+    --accent-text: #4b2e83
+    --accent-soft: rgba(75, 46, 131, 0.08)
+    --ink-on-accent: #ffffff
+    --shadow-card: 0 1px 2px rgba(43, 24, 76, 0.05), 0 16px 32px -20px rgba(43, 24, 76, 0.18)
+    --blob-a: rgba(168, 123, 230, 0.35)
+    --blob-b: rgba(230, 170, 205, 0.28)
+    --social-linkedin: #0a66c2
+
+:root[data-theme="dark"]
+    --bg: #1a1326
+    --surface: #241b36
+    --surface-raised: #2d2242
+    --line: #3a2e52
+    --text: #f3eefa
+    --text-secondary: #b3a8c9
+    --accent: #b794f6
+    --accent-text: #b794f6
+    --accent-soft: rgba(183, 148, 246, 0.12)
+    --ink-on-accent: #1a1326
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.2), 0 16px 32px -20px rgba(0, 0, 0, 0.45)
+    --blob-a: rgba(130, 90, 200, 0.25)
+    --blob-b: rgba(200, 130, 170, 0.16)
+    --social-linkedin: #6cb2eb
+
+@media (prefers-color-scheme: dark)
+    :root:not([data-theme])
+        --bg: #1a1326
+        --surface: #241b36
+        --surface-raised: #2d2242
+        --line: #3a2e52
+        --text: #f3eefa
+        --text-secondary: #b3a8c9
+        --accent: #b794f6
+        --accent-text: #b794f6
+        --accent-soft: rgba(183, 148, 246, 0.12)
+        --ink-on-accent: #1a1326
+        --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.2), 0 16px 32px -20px rgba(0, 0, 0, 0.45)
+        --blob-a: rgba(130, 90, 200, 0.25)
+        --blob-b: rgba(200, 130, 170, 0.16)
+        --social-linkedin: #6cb2eb
