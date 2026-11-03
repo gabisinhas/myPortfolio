@@ -14,7 +14,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-card">
           <SectionHeading eyebrow="Contact" title="Let’s talk" />
-          <p>
+          <p className="intro">
             Open to senior full stack roles where Python/Django or
             React/TypeScript depth, Clean Architecture and AI-assisted
             engineering add value. Reach out directly, I reply to every
