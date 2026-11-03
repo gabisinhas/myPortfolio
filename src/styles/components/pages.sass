@@ -1,7 +1,55 @@
 @use '../variables'
+@use '../mixins'
 
-.page-container
+.container
     max-width: 1200px
     margin: 0 auto
-    padding: 2rem
-    margin-top: 4rem 
+    padding: 0 2rem
+
+    @include mixins.mobile
+        padding: 0 1.25rem
+
+// shared section heading style
+.section-heading
+    color: variables.$text-color
+    font-size: 2.25rem
+    font-weight: 800
+    letter-spacing: -0.02em
+    line-height: 1.15
+
+.eyebrow
+    @include mixins.eyebrow
+
+.btn
+    @include mixins.btn
+
+.btn-outline
+    @include mixins.btn-outline
+
+// icon badge — small square used for a labeled icon (stats, cards, contact rows)
+.icon-badge
+    @include mixins.icon-badge
+
+.icon-badge--lg
+    @include mixins.icon-badge(2.75rem)
+
+// tag pill — icon + label chip used for tech/skill tags across sections
+.tag-pill
+    @include mixins.tag-pill(sm)
+
+.tag-pill--md
+    @include mixins.tag-pill(md)
+
+// soft decorative background shapes — purely visual, inert to assistive tech
+.blob
+    position: absolute
+    border-radius: 50%
+    filter: blur(70px)
+    pointer-events: none
+    z-index: 0
+
+.blob--a
+    background: var(--blob-a)
+
+.blob--b
+    background: var(--blob-b)

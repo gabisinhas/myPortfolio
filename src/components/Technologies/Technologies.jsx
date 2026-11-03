@@ -1,16 +1,15 @@
-import React from 'react'
+/* eslint-disable react/prop-types -- no prop-types dependency in this project; items: string[] */
+import TagPill from '../TagPill/TagPill'
 import './technologies.sass'
 
-const techAreas = ["Html", "CSS", "JavaScript","Vue.js","React", "Node.Js", "Python", "CICD", "DevOps","Docker", "Code Security", "GitHub", "SQL", "UX Design"]
-
-const Technologies = () => {
+const Technologies = ({ items }) => {
   return (
-  <div className='container-code-tag '>
-  {techAreas.map((area, index) =>(
-      <p className='code-tag' key={index}>{area}</p>      
-  ))}
-  </div>
-  
-)}
+    <ul className="tag-list">
+      {items.map((item) => (
+        <TagPill key={item} label={item} size="md" />
+      ))}
+    </ul>
+  )
+}
 
 export default Technologies

@@ -1,23 +1,6 @@
-@use '../../styles/variables'
-@use '../../styles/mixins'
-
-.container-code-tag 
+.tag-list
+    list-style: none
     display: flex
     flex-wrap: wrap
-    gap: 1rem
-    margin: 1.5rem 0
-    justify-content: center
-    
-.code-tag
-    background-color: #F8F8FF
-    padding: .8rem 1.2rem
-    color: variables.$text-color-secondary
-    border-radius: variables.$card-border-radius
-    font-weight: 600
-    transition: all 0.3s ease
-    cursor: pointer
-
-    &:hover
-        background: variables.$gradient
-        color: variables.$text-color
-        transform: translateY(-3px)
+    gap: .65rem
+    margin-top: 1.25rem

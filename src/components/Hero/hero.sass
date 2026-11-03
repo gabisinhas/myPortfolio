@@ -1,0 +1,98 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.hero
+    position: relative
+    padding: 8.5rem 0 5rem
+    overflow: hidden
+
+    @include mixins.tablet
+        padding: 7rem 0 3rem
+
+.hero-blob-a
+    width: 36rem
+    height: 36rem
+    top: -14rem
+    right: -10rem
+
+.hero-blob-b
+    width: 22rem
+    height: 22rem
+    bottom: -6rem
+    right: 14rem
+
+.hero-grid
+    position: relative
+    z-index: 1
+    display: grid
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr)
+    gap: 3rem
+    align-items: center
+
+    @include mixins.tablet
+        grid-template-columns: 1fr
+        gap: 2.5rem
+
+.hero-copy
+    h1
+        color: variables.$text-color
+        font-size: 3.5rem
+        font-weight: 800
+        letter-spacing: -0.02em
+        line-height: 1.08
+        margin-bottom: 1.1rem
+
+        @include mixins.mobile
+            font-size: 2.4rem
+
+    p
+        color: variables.$text-color-secondary
+        font-size: 1.1rem
+        line-height: 1.6
+        max-width: 42rem
+        margin-bottom: 2.25rem
+
+.hero-stats
+    display: flex
+    flex-wrap: wrap
+    gap: 1.75rem 2.25rem
+    margin-bottom: 2.25rem
+    padding-bottom: 2rem
+    border-bottom: 1px solid variables.$line-color
+
+.hero-stat
+    display: flex
+    align-items: flex-start
+    gap: .75rem
+    max-width: 15rem
+
+    dt
+        color: variables.$text-color
+        font-size: 1.5rem
+        font-weight: 800
+        line-height: 1.1
+
+    dd
+        color: variables.$text-color-secondary
+        font-size: .85rem
+        line-height: 1.4
+        margin-top: .2rem
+
+.hero-actions
+    display: flex
+    flex-wrap: wrap
+    gap: 1rem
+
+.hero-photo
+    position: relative
+
+    img
+        width: 100%
+        aspect-ratio: 4 / 4.5
+        object-fit: cover
+        border-radius: variables.$radius-lg
+        box-shadow: variables.$shadow-card
+
+    @include mixins.tablet
+        max-width: 22rem
+        margin: 0 auto

@@ -1,15 +1,13 @@
-import React from 'react'
+import Hero from '../../components/Hero/Hero'
 import MainContent from '../../components/MainContent/MainContent'
-import SideBar from '../../components/Sidebar/Sidebar'
 
 const Home = () => {
   return (
-    <div id="portfolio">
-      <h1>Gabriela dos Santos</h1>
-      <SideBar />
+    <>
+      <Hero />
       <MainContent />
-    </div>
+    </>
   )
 }
 
-export default Home 
+export default Home

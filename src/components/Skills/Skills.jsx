@@ -1,23 +1,15 @@
-import React from 'react'
 import Technologies from '../Technologies/Technologies'
+import SectionHeading from '../SectionHeading/SectionHeading'
+import { skillItems } from '../../data/skillsData'
 import './skills.sass'
 
 const Skills = () => {
   return (
-    <main>
-      <section style={{ marginTop: '8rem' }}>
-        <div id="skills-content">
-        <h2>Core Skills</h2>
-        <Technologies />
-        <br /> 
-        <p>
-          <b>Tools & Platforms:</b> GitHub, JIRA, Confluence, Monday, Mural, Instana, SonarQube, Mend, CI/CD pipelines, IBM Cloud, qTest, Docker, Equus APRO
-          Security & Compliance: Code Security, CI/CD, Vulnerabilties management
-        </p>
-        </div>
-      </section>
-    </main>
+    <div id="skills" className="skills-block">
+      <SectionHeading eyebrow="Core skills" title="Technologies & Practices" />
+      <Technologies items={skillItems} />
+    </div>
   )
 }
 
-export default Skills 
+export default Skills
